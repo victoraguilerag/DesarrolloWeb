@@ -21,17 +21,52 @@ body{
 	font-family: 'PT Sans Narrow',sans-serif;
 	margin: 0;
 }
+input, textarea{
+	outline:0;
+}
+input:focus, textarea:focus{
+	background:lightgray;
+}
+table{
+	width:100%;	
+}
+th{
+	background-color: #273b47;
+	color: white;
+	padding: 10px;
+	text-align: left;
+	padding-left:20px;
+}
+td{
+	padding:20px;
+}
+table,td,th{
+	border:1px solid #237b47;
+	border-collapse: collapse;
+}
+.background{
+	background-image: url('../img/background.png');
+	background-size: cover;
+}
 .button{
-	border-radius:5px;
+	border-radius:8px;
 	background-color: #fd324e;
+	padding:5px 12px;
 	color:white;
 	border:none;
+	font-size:18px;
+	background: linear-gradient(to left,#fd324e,#ff600a);
+	cursor:pointer;
+	text-decoration:none;
 }
 .titulo{
 	font-family:'Roboto',sans-serif;
 	font-size:70px;
 	margin-top: 70px;
 	margin-bottom: 0;
+}
+.titulo span{
+	text-decoration:underline;
 }
 
 .title-a{
@@ -45,7 +80,7 @@ body{
 }
 .guitarras{
 	color:rgba(31,49,60,1);
-	
+	margin-bottom: 120px !important;
 }
 .guitarras h2{
 	font-size:35px;
@@ -55,8 +90,13 @@ body{
 
 .portada{
 	padding:20px;
-	background-image: url('../img/background.png') ;
 	color:white;
+	display:flex;
+	flex-flow:column wrap;
+	align-items:flex-start;
+	justify-content: center;
+	align-content: space-between;
+	height:500px;
 	
 }
 .portada button{
@@ -66,14 +106,26 @@ body{
 	font-size:24px;
 	display:inline-block;
 	position:absolute;
-	right: 0;
+	right: 300px;
 }
 .menu li{
 	display:inline-block;
 	margin-left: 30px;
 }
+.menu li:before{
+	content: '+';
+	font-size: 50px;
+	line-height: 5px;
+	color:lightgray;
+}
+.menu a{
+	color:white;
+	text-decoration:none;
+}
+
 .logotipo{
 	display:inline-block;
+	margin-left: 0;
 }
 .header{
 	position: relative;
@@ -81,6 +133,7 @@ body{
 .contenedor{
 	width: 800px;
 	margin: auto;
+	postion:relative;
 }
 .guitarra{
 	position:relative;
@@ -116,7 +169,9 @@ body{
 }
 .footer{
 	background-color: #273b47; 
+	padding:50px;
 }
+
 .contacto{
 	display: flex;
 	width:280px;
@@ -124,6 +179,7 @@ body{
 	align-items:center;
 	justify-content: space-between;
 	align-content: space-around;
+	height:200px;
 }
 .contacto img{
 	display: block;
@@ -140,11 +196,12 @@ body{
 	display:flex;
 	justify-content: space-between;
 }
+
 .formulario{
 	display:flex;
 	width:400px;
 	color:white;
-	padding:50px;
+	
 }
 .col1, .col2{
 	display:flex;
@@ -154,8 +211,11 @@ body{
 .col1{
 	margin-right: 20px;
 }
-col2{
-	align-items:flex-start;
+.col2{
+	align-items:center;
+}
+.col2 .button{
+	margin-top: 15px;
 }
 .intereses label{
 	font-size:15px;
@@ -165,4 +225,7 @@ col2{
 }
 .sexo{
 	margin-top: 10px;
+}
+.tabla{
+	margin:50px auto;
 }
