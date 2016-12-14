@@ -1,0 +1,166 @@
+/*font-family: 'Roboto', sans-serif;*/
+/*font-family: 'PT Sans Narrow', sans-serif;*/
+*{
+	/*  width:tamano;
+	    height:tamano; 
+		padding-top: 10px;
+		padding-left:15px;
+		padding-right: 13px;
+		padding-bottom: 5px; 
+		padding: 10px;
+		margin: 10px; 
+		padding: 10px 13px 5px 15;
+		margin-top:10px;
+		border:2px solid red;
+		margin-right:13px;
+		margin-bottom: 15px;
+		margin-left: 5px;
+		margin: 10px 13px 5px 15px;		*/
+}
+body{
+	font-family: 'PT Sans Narrow',sans-serif;
+	margin: 0;
+}
+.button{
+	border-radius:5px;
+	background-color: #fd324e;
+	color:white;
+	border:none;
+}
+.titulo{
+	font-family:'Roboto',sans-serif;
+	font-size:70px;
+	margin-top: 70px;
+	margin-bottom: 0;
+}
+
+.title-a{
+	font-size:24px;
+	margin-top: 0;
+}
+
+.title-b{
+	font-size:25px;
+	margin-bottom: 20px;
+}
+.guitarras{
+	color:rgba(31,49,60,1);
+	
+}
+.guitarras h2{
+	font-size:35px;
+	font-family:'Roboto',sans-serif;
+	
+}
+
+.portada{
+	padding:20px;
+	background-image: url('../img/background.png') ;
+	color:white;
+	
+}
+.portada button{
+	margin-bottom: 50px;
+}
+.menu{
+	font-size:24px;
+	display:inline-block;
+	position:absolute;
+	right: 0;
+}
+.menu li{
+	display:inline-block;
+	margin-left: 30px;
+}
+.logotipo{
+	display:inline-block;
+}
+.header{
+	position: relative;
+}
+.contenedor{
+	width: 800px;
+	margin: auto;
+}
+.guitarra{
+	position:relative;
+	margin:50px 0;
+	padding:50px 0;
+	border: 1px solid rgba(31,49,60,1);
+	border-radius:8px;
+}
+.right{
+	float:right;
+	position:absolute;
+	top:-97px;
+	right:0;
+	/*
+	left
+	top
+	right
+	bottom
+	*/
+}
+.left{
+	float:left;
+	position:absolute;
+	top: 0;
+	left:0;
+}
+.contenedor-guitarra-a{
+	margin-left:50px;
+	margin-right: 50px;
+}
+.contenedor-guitarra-b{
+	margin-left: 400px;
+}
+.footer{
+	background-color: #273b47; 
+}
+.contacto{
+	display: flex;
+	width:280px;
+	flex-wrap: wrap;
+	align-items:flex-start;
+}
+.contacto img{
+	display: block;
+}
+.contacto strong{
+	display:block;
+}
+.contacto a{
+	color:white;
+	text-decoration: none;
+	margin: 10px 10px 10px  0;
+}
+.footer .contenedor{
+	display:flex;
+	justify-content: space-between;
+}
+.formulario{
+	display:flex;
+	width:400px;
+	color:white;
+	padding:50px;
+}
+.col1, .col2{
+	display:flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.col1{
+	margin-right: 20px;
+}
+col2{
+	align-items:flex-start;
+}
+.intereses label{
+	font-size:15px;
+}
+.formulario label, .sexo, .intereses{
+	margin-bottom: 10px;
+}
+.sexo{
+	margin-top: 10px;
+}
