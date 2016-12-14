@@ -121,7 +121,9 @@ body{
 	display: flex;
 	width:280px;
 	flex-wrap: wrap;
-	align-items:flex-start;
+	align-items:center;
+	justify-content: space-between;
+	align-content: space-around;
 }
 .contacto img{
 	display: block;
@@ -132,7 +134,7 @@ body{
 .contacto a{
 	color:white;
 	text-decoration: none;
-	margin: 10px 10px 10px  0;
+	margin: 5px 10px 10px  0;
 }
 .footer .contenedor{
 	display:flex;
