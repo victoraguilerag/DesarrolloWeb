@@ -5,15 +5,20 @@
 	<title>Invie - tus mejores guitarras!!</title>
 	<link rel="stylesheet" href="css/invie.css">
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Roboto" rel="stylesheet">
+	<!-- <link rel="stylesheet" media="(max-width:800px)" href="css/media-querie.css"> -->
+	<meta name='viewport' content='width=device-width,height=device-height, initial-scale=1, user-scalable=no'>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/blazy/1.8.2/blazy.min.js'></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js'></script>
 </head>
 <body>
-
-	<section id='portada' class='portada background'><!-- Portada -->		
+	<section id='portada' class='portada background'><!-- Portada -->	
 		<header id='header' class='header contenedor'><!-- Header -->
+			<span class="burger-button" id='burger-button'><div class='material-icons'> computer</div></span>
 			<figure class='logotipo'>	<!-- logotipo -->
 				<img src="img/invie.png" width='180' height='60' alt="Logo Invie">
 			</figure>
-			<nav class='menu'> <!-- menu -->
+			<nav class='menu' id='menu'> <!-- menu -->
 				<ul>
 					<li>
 						<a href="index.html">Home</a>
@@ -33,12 +38,19 @@
 			<a class='button' href='#guitarras'>Conoce mas</a><!-- boton -->
 		</div>
 	</section>
-	
-	<section id='guitarras' class='guitarras contenedor'><!-- Guitarras -->
+		<section id='guitarras' class='guitarras contenedor'><!-- Guitarras -->
 		<h2>Nuestras Guitarras</h2><!-- titulo -->
+		<!-- <div class="video-demo-contenedor">
+			
+		</div> -->
+		<div class="video-demo">
+			<div class='video-responsive-contenedor'>
+				<iframe class='video-responsive-src' width="560" height="315" src="https://www.youtube.com/embed/kbjhO3iX1GY" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
 		<article class='guitarra'><!-- guitarra 1 -->
 			<div class='contenedor-guitarra-a'>
-				<img class='right'  src="img/invie-acustica.png" width='350' alt="Guitarra Invie Acustica">
+				<img class='right'  data-src="img/invie-acustica.png" width='350' alt="Guitarra Invie Acustica">
 				<h3 class='title-b'>Invie Acustica</h3>
 				<ol>
 					<li>Estilo Vintage</li>
@@ -49,7 +61,7 @@
 		</article>
 		<article class='guitarra'><!-- guitarra 2 -->	
 			<div class='contenedor-guitarra-b'>
-				<img class='left' src="img/invie-classic.png" width='450' alt="Guitarra Invie Clasicc">
+				<img class='left' data-src="img/invie-classic.png" width='450' alt="Guitarra Invie Clasicc">
 				<h3 class='title-b'>Invie Electrica</h3>
 				<ol>
 					<li>Estilo Vintage</li>
@@ -62,7 +74,7 @@
 	<footer class='footer'>
 		<div class="contenedor">
 			<div class='contacto'>
-				<img src="img/invie-white.png" alt="logotipo blanco">
+				<img data-src="img/invie-white.png" alt="logotipo blanco">
 				<a href="tel:+571293012"><strong>Telefono</strong> <span>30244456789</span></a>
 				<a href="mailto:victoraguilerag17@gmail.com"><strong>Email</strong> <span>victoraguilerag17@gmail.com</span></a>
 			</div>
@@ -96,13 +108,53 @@
 					</div>
 				</div>
 				<div class='col2'>
-					<label for="comentarios">Comentarios
-						<textarea name="Comentarios" id="comentarios" cols="30" rows="10"></textarea>
-					</label>
+					<label for="comentarios">Comentarios</label>
+					<textarea name="Comentarios" id="comentarios" cols="30" rows="10"></textarea>
 					<input type="submit" value='Enviar' class='button'></input>
 				</div>
 			</form>	
 		</div>
 	</footer>
+	<script>
+		var consulta = window.matchMedia('(max-width:500px)');
+		var burgerButton = document.getElementById('burger-button');
+		var menu = document.getElementById('menu');
+
+		consulta.addListener(mediaQuery);
+		
+		function mediaQuery(){
+			var g;
+			if(consulta.matches){
+				burgerButton.addEventListener('touchstart',toggleMenu);
+				console.log('800px Media Query')
+				g = true;
+			} else {
+				if(g){
+					burgerButton.removeEventListener()
+				}
+				console.log('Mayor a 800px')
+			}
+		};
+
+		function toggleMenu(){
+			menu.classList.toggle('active');
+		}
+		mediaQuery();
+
+		var blazy = new Blazy({
+			//opciones belazy
+			selector:'img'
+		});
+		// Gestos Touch
+		var body= document.body;
+		var gestos = new Hammer(body)
+			gestos.on('swipeleft',function(ev){
+				console.log(ev)
+			})
+			gestos.on('swiperight',function(ev){
+				console.log(ev);
+			})
+		
+	</script>
 </body>
 </html>
